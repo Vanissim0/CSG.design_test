@@ -1,0 +1,38 @@
+// @import 'vars';
+@import 'fonts';
+
+html {
+    box-sizing: border-box;
+}
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+.container {
+    
+}
+
+.header {
+    background-color: black;
+    &__inner {
+        // min-height: 163px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    // &__logo {
+    //     width: 184px;
+    // }
+    
+}
+
+.logo__link {
+    margin: 0 auto;
+    width: 184px;
+    height: 47px;
+}

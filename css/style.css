@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: black;
+}
+.header__inner {
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__link {
+  margin: 0 auto;
+  width: 184px;
+  height: 47px;
+}/*# sourceMappingURL=style.css.map */
