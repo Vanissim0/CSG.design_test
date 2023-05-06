@@ -1,38 +1,146 @@
 // @import 'vars';
 @import 'fonts';
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Exo:wght@600&display=swap');
 
 html {
     box-sizing: border-box;
 }
-*,*::after,*::before {
+
+*,
+*::after,
+*::before {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     min-width: 320px;
     overflow-x: hidden;
+    height: 100vh;
+    background: #141516;
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
 }
 
-.container {
-    
+@media (min-width: 768px) {
+    .header {
+        &__inner {
+            height: 190px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+        }
+
+        .logo__link-img {
+            width: 272px;
+        }
+    }
 }
+
+@media (min-width: 1280px) {
+    .header {
+        &__inner {
+            height: 162px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+        }
+
+        .logo__link-img {
+            width: 377px;
+        }
+    }
+}
+
+// .container {}
 
 .header {
-    background-color: black;
     &__inner {
-        // min-height: 163px;
+        min-height: 102px;
+        display: flex;
+        align-items: end;
         justify-content: center;
-        align-items: center;
-        
     }
-    // &__logo {
-    //     width: 184px;
-    // }
-    
+
+
 }
 
-.logo__link {
-    margin: 0 auto;
+.logo__link-img {
     width: 184px;
-    height: 47px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.top__area {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 21px;
+    text-align: center;
+    line-height: 18px;
+    max-width: 205px;
+    font-weight: 600;
+    font-family: 'Exo', sans-serif;
+}
+
+.middle__text {
+    padding-top: 195px;
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.bottom__text {
+    width: 220px;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.contacts {
+    padding-top: 158px;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 61px;
+    min-width: 201px;
+    height: 37px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.top__text-contact {
+    font-size: 14px;
+    padding-top: 24px;
+    font-weight: 400;
+}
+.bottom__text-contact {
+    font-size: 14px;
+    padding-top: 8px;
+    font-weight: 400;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    padding-top: 28px;
+}
+
+.social__icon {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 auto;
+
 }
