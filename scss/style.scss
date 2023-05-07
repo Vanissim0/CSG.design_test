@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Exo:wght@600&display=swap');
 
 $grey: rgba(255, 255, 255, 0.8);
+$grey-hover: rgba(255, 255, 255, 0.6);
+$grey-active: rgba(255, 255, 255, 0.9);
 $dark: #141516;
 
 html {
@@ -23,6 +25,19 @@ body {
     color: #fff;
     font-family: 'Exo 2', sans-serif;
 }
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background: $dark;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $grey;
+}
+
 
 @media (min-width: 768px) {
     .header {
@@ -55,6 +70,7 @@ body {
 
         .contacts {
             padding-top: 204px;
+            padding-bottom: 71px;
         }
 
         .button {
@@ -86,7 +102,6 @@ body {
             width: 60px;
             height: 60px;
             background-color: $grey;
-
         }
     }
 
@@ -127,6 +142,7 @@ body {
             padding-top: 336px;
             display: flex;
             flex-direction: row-reverse;
+            padding-bottom: 109px;
         }
 
         .button {
@@ -175,25 +191,19 @@ body {
 
         .contacts div:nth-child(2) {
             order: -2;
-            margin:0  87px;
+            margin: 0 87px;
         }
 
         .contacts div:nth-child(3) {
             order: -1;
-            // margin-right: 87px;
         }
 
         .contacts div:nth-child(4) {
             order: -3;
         }
-
-
-
     }
-
 }
 
-// .container {}
 
 .header {
     &__inner {
@@ -202,8 +212,6 @@ body {
         align-items: end;
         justify-content: center;
     }
-
-
 }
 
 .logo__link-img {
@@ -243,6 +251,7 @@ body {
 
 .contacts {
     padding-top: 158px;
+    padding-bottom: 75px;
 }
 
 .button {
@@ -253,18 +262,37 @@ body {
     height: 37px;
     font-size: 12px;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: $grey-hover;
+}
+
+.button:active {
+    background-color: $grey-active;
 }
 
 .top__text-contact {
     font-size: 14px;
     padding-top: 24px;
     font-weight: 400;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 .bottom__text-contact {
     font-size: 14px;
     padding-top: 8px;
     font-weight: 400;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 .social {
@@ -283,5 +311,18 @@ body {
     text-align: center;
     border-radius: 50%;
     margin: 0 auto;
-
+    cursor: pointer;
 }
+
+.social__icon:hover {
+    background-color: $grey-hover;
+}
+
+.social__icon:active {
+    background-color: $grey-active;
+}
+
+// .popup__dialog {
+//     height: 100%;
+//     background-color: #fff;
+// }

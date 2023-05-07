@@ -20,6 +20,18 @@ body {
   font-family: "Exo 2", sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #141516;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 @media (min-width: 768px) {
   .header__inner {
     height: 190px;
@@ -43,6 +55,7 @@ body {
   }
   .main .contacts {
     padding-top: 204px;
+    padding-bottom: 71px;
   }
   .main .button {
     min-width: 182px;
@@ -98,6 +111,7 @@ body {
     padding-top: 336px;
     display: flex;
     flex-direction: row-reverse;
+    padding-bottom: 109px;
   }
   .main .button {
     min-width: 213px;
@@ -190,6 +204,7 @@ body {
 
 .contacts {
   padding-top: 158px;
+  padding-bottom: 75px;
 }
 
 .button {
@@ -200,6 +215,15 @@ body {
   height: 37px;
   font-size: 12px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.button:active {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .top__text-contact {
@@ -207,11 +231,19 @@ body {
   padding-top: 24px;
   font-weight: 400;
 }
+.top__text-contact a {
+  color: #fff;
+  text-decoration: none;
+}
 
 .bottom__text-contact {
   font-size: 14px;
   padding-top: 8px;
   font-weight: 400;
+}
+.bottom__text-contact a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .social {
@@ -230,4 +262,13 @@ body {
   text-align: center;
   border-radius: 50%;
   margin: 0 auto;
+  cursor: pointer;
+}
+
+.social__icon:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.social__icon:active {
+  background-color: rgba(255, 255, 255, 0.9);
 }/*# sourceMappingURL=style.css.map */
