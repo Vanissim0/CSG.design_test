@@ -1,6 +1,7 @@
-// @import 'vars';
-@import 'fonts';
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Exo:wght@600&display=swap');
+
+$grey: rgba(255, 255, 255, 0.8);
+$dark: #141516;
 
 html {
     box-sizing: border-box;
@@ -18,7 +19,7 @@ body {
     min-width: 320px;
     overflow-x: hidden;
     height: 100vh;
-    background: #141516;
+    background: $dark;
     color: #fff;
     font-family: 'Exo 2', sans-serif;
 }
@@ -27,15 +28,68 @@ body {
     .header {
         &__inner {
             height: 190px;
-            display: flex;
-            align-items: end;
-            justify-content: center;
         }
 
         .logo__link-img {
             width: 272px;
         }
     }
+
+    .main {
+        .top__area {
+            font-size: 20px;
+            padding-top: 25px;
+            min-width: 342px;
+            line-height: normal;
+        }
+
+        .middle__text {
+            padding-top: 189px;
+            font-size: 32px;
+        }
+
+        .bottom__text {
+            width: 452px;
+            padding-top: 17px;
+        }
+
+        .contacts {
+            padding-top: 204px;
+        }
+
+        .button {
+            min-width: 182px;
+            height: 55px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .top__text-contact {
+            font-size: 20px;
+            padding-top: 30px;
+            font-weight: 500;
+        }
+
+        .bottom__text-contact {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            padding-top: 31px;
+        }
+
+        .social__icon {
+            display: flex;
+            width: 60px;
+            height: 60px;
+            background-color: $grey;
+
+        }
+    }
+
 }
 
 @media (min-width: 1280px) {
@@ -51,6 +105,92 @@ body {
             width: 377px;
         }
     }
+
+    .main {
+        .top__area {
+            font-size: 24px;
+            padding-top: 29px;
+            min-width: 804px;
+        }
+
+        .middle__text {
+            padding-top: 240px;
+            font-size: 64px;
+            line-height: 1;
+        }
+
+        .bottom__text {
+            width: 100%;
+        }
+
+        .contacts {
+            padding-top: 336px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .button {
+            min-width: 213px;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 31px;
+        }
+
+        .top__text-contact {
+            font-size: 28px;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+
+        .bottom__text-contact {
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            padding-top: 0;
+        }
+
+        .social__icon {
+            width: 60px;
+            height: 60px;
+            background-color: $grey;
+            margin: 0 31px;
+        }
+
+        .social__icon:nth-child(1) {
+            margin-right: -62px;
+        }
+
+        .social__icon:nth-child(3) {
+            margin-left: -62px;
+        }
+
+        .contacts div:nth-child(1) {
+            order: -4;
+        }
+
+        .contacts div:nth-child(2) {
+            order: -2;
+            margin:0  87px;
+        }
+
+        .contacts div:nth-child(3) {
+            order: -1;
+            // margin-right: 87px;
+        }
+
+        .contacts div:nth-child(4) {
+            order: -3;
+        }
+
+
+
+    }
+
 }
 
 // .container {}
@@ -106,7 +246,7 @@ body {
 }
 
 .button {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: $grey;
     border: none;
     border-radius: 61px;
     min-width: 201px;
@@ -120,6 +260,7 @@ body {
     padding-top: 24px;
     font-weight: 400;
 }
+
 .bottom__text-contact {
     font-size: 14px;
     padding-top: 8px;
